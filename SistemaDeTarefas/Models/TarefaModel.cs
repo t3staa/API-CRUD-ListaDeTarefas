@@ -2,6 +2,7 @@
 
 namespace SistemaDeTarefas.Models
 {
+    //Criando as tabelas de tarefas do banco pelo C#
     public class TarefaModel
     {
         public int Id { get; set; }

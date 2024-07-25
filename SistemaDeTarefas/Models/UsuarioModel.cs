@@ -1,5 +1,6 @@
 ﻿namespace SistemaDeTarefas.Models
 {
+    //Criando as tabelas usuarios do banco de dados pelo C#
     public class UsuarioModel
     {
         public int Id { get; set; }

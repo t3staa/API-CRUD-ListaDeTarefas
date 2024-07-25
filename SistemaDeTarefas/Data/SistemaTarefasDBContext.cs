@@ -8,10 +8,10 @@ namespace SistemaDeTarefas.Data
 {
     [Route("api/[controller]")]
     [ApiController]
-    //Criando o contexto do Banco de Dados
+    //Criando o contexto do Banco de Dados / Ponte entre o BD e o .NET
     public class SistemaTarefasDBContext : DbContext
     {
-        //Metodo Construtor
+        //Metodo Construtor / Passando informações da conexão
         public SistemaTarefasDBContext(DbContextOptions<SistemaTarefasDBContext> options)
             : base(options)
         {
@@ -22,6 +22,7 @@ namespace SistemaDeTarefas.Data
 
         //Tabela Usuarios
         public DbSet<UsuarioModel> Usuarios { get; set; }
+
         //Tabela Tarefass
         public DbSet<TarefaModel> Tarefas { get; set; }
 

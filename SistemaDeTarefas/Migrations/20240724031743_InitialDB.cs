@@ -2,6 +2,7 @@
 
 #nullable disable
 
+//Esse codigo é a parte de migração, ou seja, a criação das tabelas pelo EF
 namespace SistemaDeTarefas.Migrations
 {
     /// <inheritdoc />
