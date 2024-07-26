@@ -6,8 +6,7 @@ using SistemaDeTarefas.Models;
 
 namespace SistemaDeTarefas.Data
 {
-    [Route("api/[controller]")]
-    [ApiController]
+    [Route("api/")]
     //Criando o contexto do Banco de Dados / Ponte entre o BD e o .NET
     public class SistemaTarefasDBContext : DbContext
     {
@@ -15,7 +14,6 @@ namespace SistemaDeTarefas.Data
         public SistemaTarefasDBContext(DbContextOptions<SistemaTarefasDBContext> options)
             : base(options)
         {
-
         }
 
         //Trabalhando com ORM, facilitando trabalhar com Banco de dados, criando a estrutura e as tabelas pelo csharp
