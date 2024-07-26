@@ -39,5 +39,22 @@ namespace SistemaDeTarefas.Controllers
             UsuarioModel usuario = await _usuarioRepositorio.Adicionar(usuarioModel);
             return Ok(usuario);
         }
+
+        //Metodo para atualizar usuario
+        [HttpPut("{id}")]
+        public async Task<ActionResult<UsuarioModel>> Atualizar([FromBody] UsuarioModel usuarioModel, int id)
+        {
+            usuarioModel.Id = id;
+            UsuarioModel usuario = await _usuarioRepositorio.Atualizar(usuarioModel, id);
+            return Ok(usuario);
+        }
+
+        //Metodo para deletar usuario
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<UsuarioModel>> Deletar(int id)
+        {
+            bool apagado = await _usuarioRepositorio.Apagar(id);
+            return Ok(apagado);
+        }
     }
 }
